@@ -51,7 +51,7 @@ git --version
 
 echo
 echo "Homebrew:"
-brew --version | head -1
+brew --version | sed -n '1p'
 
 echo
 echo "Doctor completed."
