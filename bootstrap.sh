@@ -9,7 +9,13 @@ echo
 ./install/20-brewfile.sh
 ./install/30-python.sh
 ./install/40-r.sh
+./install/50-docker.sh
+
+echo
+echo "Running workstation doctor..."
+echo
+
 ./doctor.sh
 
 echo
-echo "Bootstrap completed."
+echo "Bootstrap completed successfully."
