@@ -1,4 +1,4 @@
-.PHONY: bootstrap doctor update clean
+.PHONY: bootstrap doctor update clean inventory
 
 bootstrap:
 	./bootstrap.sh
@@ -13,3 +13,6 @@ update:
 
 clean:
 	brew cleanup
+
+inventory:
+	./scripts/inventory.sh
