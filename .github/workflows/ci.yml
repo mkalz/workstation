@@ -36,3 +36,77 @@ jobs:
           test -x install/40-r.sh
           test -x install/50-docker.sh
           test -x scripts/inventory.sh
+
+on:
+  push:
+  pull_request:
+
+jobs:
+  validate:
+    runs-on: macos-latest
+
+    steps:
+      - name: Check out repository
+        uses: actions/checkout@v4
+
+      - name: Install uv
+        run: brew install uv
+
+      - name: Sync Python tooling
+        run: uv sync
+
+      - name: Validate application manifest
+        run: make validate
+
+      - name: Check shell scripts
+        run: |
+          brew install shellcheck
+          shellcheck bootstrap.sh doctor.sh install/*.sh scripts/*.sh
+
+      - name: Check executable scripts
+        run: |
+          test -x bootstrap.sh
+          test -x doctor.sh
+          test -x install/10-homebrew.sh
+          test -x install/20-brewfile.sh
+          test -x install/30-python.sh
+          test -x install/40-r.sh
+          test -x install/50-docker.sh
+          test -x scripts/inventory.sh:name: CI
+
+on:
+  push:
+  pull_request:
+
+jobs:
+  validate:
+    runs-on: macos-latest
+
+    steps:
+      - name: Check out repository
+        uses: actions/checkout@v4
+
+      - name: Install uv
+        run: brew install uv
+
+      - name: Sync Python tooling
+        run: uv sync
+
+      - name: Validate application manifest
+        run: make validate
+
+      - name: Check shell scripts
+        run: |
+          brew install shellcheck
+          shellcheck bootstrap.sh doctor.sh install/*.sh scripts/*.sh
+
+      - name: Check executable scripts
+        run: |
+          test -x bootstrap.sh
+          test -x doctor.sh
+          test -x install/10-homebrew.sh
+          test -x install/20-brewfile.sh
+          test -x install/30-python.sh
+          test -x install/40-r.sh
+          test -x install/50-docker.sh
+          test -x scripts/inventory.sh
