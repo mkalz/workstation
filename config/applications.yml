@@ -1,0 +1,205 @@
+applications:
+  - name: Git
+    type: formula
+    package: git
+    purpose: Version control
+
+  - name: GitHub CLI
+    type: formula
+    package: gh
+    purpose: GitHub workflow
+
+  - name: curl
+    type: formula
+    package: curl
+    purpose: HTTP client
+
+  - name: wget
+    type: formula
+    package: wget
+    purpose: File downloads
+
+  - name: jq
+    type: formula
+    package: jq
+    purpose: JSON processing
+
+  - name: yq
+    type: formula
+    package: yq
+    purpose: YAML processing
+
+  - name: tree
+    type: formula
+    package: tree
+    purpose: Directory inspection
+
+  - name: fd
+    type: formula
+    package: fd
+    purpose: Fast file search
+
+  - name: ripgrep
+    type: formula
+    package: ripgrep
+    purpose: Fast text search
+
+  - name: fzf
+    type: formula
+    package: fzf
+    purpose: Fuzzy finding
+
+  - name: mas
+    type: formula
+    package: mas
+    purpose: Mac App Store CLI
+
+  - name: Python
+    type: formula
+    package: python
+    purpose: Host Python runtime
+
+  - name: uv
+    type: formula
+    package: uv
+    purpose: Python project environments
+
+  - name: R
+    type: formula
+    package: r
+    purpose: Statistical computing
+
+  - name: Quarto
+    type: formula
+    package: quarto
+    purpose: Scientific publishing
+
+  - name: Pandoc
+    type: formula
+    package: pandoc
+    purpose: Document conversion
+
+  - name: Hugo
+    type: formula
+    package: hugo
+    purpose: Static website generation
+
+  - name: ImageMagick
+    type: formula
+    package: imagemagick
+    purpose: Image processing
+
+  - name: FFmpeg
+    type: formula
+    package: ffmpeg
+    purpose: Audio and video processing
+
+  - name: Node.js
+    type: formula
+    package: node
+    purpose: JavaScript runtime
+
+  - name: Go
+    type: formula
+    package: go
+    purpose: Go development
+
+  - name: PostgreSQL 16
+    type: formula
+    package: postgresql@16
+    purpose: Local database tooling
+
+  - name: Mosquitto
+    type: formula
+    package: mosquitto
+    purpose: MQTT tooling
+
+  - name: Ollama
+    type: formula
+    package: ollama
+    purpose: Local AI experiments
+
+  - name: Gemini CLI
+    type: formula
+    package: gemini-cli
+    purpose: AI-assisted command line workflows
+
+  - name: RStudio
+    type: cask
+    package: rstudio
+    purpose: R development
+
+  - name: Zotero
+    type: cask
+    package: zotero
+    purpose: Reference management
+
+  - name: Visual Studio Code
+    type: cask
+    package: visual-studio-code
+    purpose: Code and documentation editing
+
+  - name: Microsoft Office
+    type: cask
+    package: microsoft-office
+    purpose: Office productivity
+
+  - name: Docker Desktop
+    type: cask
+    package: docker
+    purpose: Containers and local infrastructure
+
+  - name: Google Chrome
+    type: cask
+    package: google-chrome
+    purpose: Browser testing
+
+  - name: Firefox
+    type: cask
+    package: firefox
+    purpose: Secondary browser
+
+  - name: ChatGPT
+    type: cask
+    package: chatgpt
+    purpose: AI-assisted work
+
+  - name: Claude
+    type: cask
+    package: claude
+    purpose: AI-assisted work
+
+  - name: Rectangle
+    type: cask
+    package: rectangle
+    purpose: Window management
+
+  - name: BetterDisplay
+    type: cask
+    package: betterdisplay
+    purpose: Display management
+
+  - name: Keynote
+    type: mas
+    id: 409183694
+    purpose: Presentations
+
+  - name: Pages
+    type: mas
+    id: 409201541
+    purpose: Documents
+
+  - name: Numbers
+    type: mas
+    id: 409203825
+    purpose: Spreadsheets
+
+  - name: VMware Fusion
+    type: manual
+    purpose: Virtualization
+    notes: Install manually only if still needed.
+
+  - name: AFFiNE
+    type: manual
+    purpose: Knowledge management
+    notes: Install manually if not available through Homebrew Cask at setup time.

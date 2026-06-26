@@ -1,103 +1,65 @@
 #!/usr/bin/env python3
 
 from pathlib import Path
-import re
 import sys
+import yaml
 
-try:
-    import yaml
-except ImportError:
-    print("ERROR: PyYAML is required.")
-    print("Install with:")
-    print("    uv tool install pyyaml")
-    sys.exit(1)
-
+from generate_brewfile import generate_brewfile, load_manifest
 
 ROOT = Path(__file__).resolve().parent.parent
-
 BREWFILE = ROOT / "Brewfile"
-APPLICATIONS = ROOT / "config" / "applications.yml"
 
 
-def parse_brewfile():
-    """Return all casks declared in Brewfile."""
-    casks = set()
+def validate_manifest(applications: list[dict]) -> list[str]:
+    errors = []
+    seen = set()
+
+    for index, app in enumerate(applications, start=1):
+        name = app.get("name")
+        app_type = app.get("type")
+
+        if not name:
+            errors.append(f"Entry {index}: missing name.")
+
+        if app_type not in {"formula", "cask", "mas", "manual"}:
+            errors.append(f"Entry {index}: unsupported type '{app_type}'.")
+
+        if app_type in {"formula", "cask"} and not app.get("package"):
+            errors.append(f"Entry {index}: {app_type} entry requires package.")
+
+        if app_type == "mas" and not app.get("id"):
+            errors.append(f"Entry {index}: mas entry requires id.")
+
+        key = (app_type, app.get("package") or app.get("id") or name)
+        if key in seen:
+            errors.append(f"Entry {index}: duplicate application entry {key}.")
+        seen.add(key)
+
+    return errors
+
+
+def main() -> int:
+    applications = load_manifest()
+    errors = validate_manifest(applications)
+
+    expected_brewfile = generate_brewfile(applications)
 
     if not BREWFILE.exists():
-        raise FileNotFoundError(BREWFILE)
+        errors.append("Brewfile does not exist. Run: make generate-brewfile")
+    else:
+        actual_brewfile = BREWFILE.read_text(encoding="utf-8")
+        if actual_brewfile != expected_brewfile:
+            errors.append("Brewfile is out of sync. Run: make generate-brewfile")
 
-    pattern = re.compile(r'cask\s+"([^"]+)"')
+    if errors:
+        print("Application validation failed:")
+        for error in errors:
+            print(f"- {error}")
+        return 1
 
-    with BREWFILE.open() as f:
-        for line in f:
-            m = pattern.search(line)
-            if m:
-                casks.add(m.group(1))
-
-    return casks
-
-
-def parse_manifest():
-    """Return all cask packages from applications.yml."""
-    if not APPLICATIONS.exists():
-        raise FileNotFoundError(APPLICATIONS)
-
-    with APPLICATIONS.open() as f:
-        data = yaml.safe_load(f)
-
-    packages = []
-
-    for app in data.get("applications", []):
-        if app.get("type") == "cask":
-            packages.append(app["package"])
-
-    return packages
-
-
-def main():
-    brew_casks = parse_brewfile()
-    manifest = parse_manifest()
-
-    ok = True
-
-    print("Validating application manifest")
-    print("--------------------------------")
-
-    duplicates = sorted(
-        {p for p in manifest if manifest.count(p) > 1}
-    )
-
-    if duplicates:
-        ok = False
-        print("\nDuplicate packages:")
-        for d in duplicates:
-            print(f"  - {d}")
-
-    missing = sorted(
-        set(manifest) - brew_casks
-    )
-
-    if missing:
-        ok = False
-        print("\nMissing from Brewfile:")
-        for m in missing:
-            print(f"  - {m}")
-
-    unused = sorted(
-        brew_casks - set(manifest)
-    )
-
-    if unused:
-        print("\nPresent in Brewfile only:")
-        for u in unused:
-            print(f"  - {u}")
-
-    if ok:
-        print("\n✓ Manifest is consistent.")
-        sys.exit(0)
-
-    sys.exit(1)
+    print("Application manifest is valid.")
+    return 0
 
 
 if __name__ == "__main__":
-    main()
+    sys.exit(main())

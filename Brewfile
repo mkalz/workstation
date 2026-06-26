@@ -1,8 +1,9 @@
 # Workstation Brewfile
-# Source of truth for host-level software on a clean Apple Silicon workstation.
+# Generated from config/applications.yml.
+# Do not edit manually.
 
 # --------------------------------------------------------------------
-# Core CLI
+# Formulae
 # --------------------------------------------------------------------
 brew "git"
 brew "gh"
@@ -15,43 +16,23 @@ brew "fd"
 brew "ripgrep"
 brew "fzf"
 brew "mas"
-
-# --------------------------------------------------------------------
-# Python
-# --------------------------------------------------------------------
 brew "python"
 brew "uv"
-
-# --------------------------------------------------------------------
-# Academic writing and publishing
-# --------------------------------------------------------------------
 brew "r"
 brew "quarto"
 brew "pandoc"
 brew "hugo"
 brew "imagemagick"
 brew "ffmpeg"
-
-# --------------------------------------------------------------------
-# Development
-# --------------------------------------------------------------------
 brew "node"
 brew "go"
 brew "postgresql@16"
-
-# --------------------------------------------------------------------
-# Infrastructure and smart home
-# --------------------------------------------------------------------
 brew "mosquitto"
-
-# --------------------------------------------------------------------
-# AI and local experimentation
-# --------------------------------------------------------------------
 brew "ollama"
 brew "gemini-cli"
 
 # --------------------------------------------------------------------
-# Applications
+# Casks
 # --------------------------------------------------------------------
 cask "rstudio"
 cask "zotero"
@@ -64,3 +45,10 @@ cask "chatgpt"
 cask "claude"
 cask "rectangle"
 cask "betterdisplay"
+
+# --------------------------------------------------------------------
+# Mac App Store
+# --------------------------------------------------------------------
+mas "Keynote", id: 409183694
+mas "Pages", id: 409201541
+mas "Numbers", id: 409203825
