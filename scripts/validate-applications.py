@@ -1,13 +1,22 @@
 #!/usr/bin/env python3
 
 from pathlib import Path
+import importlib.util
 import sys
-import yaml
-
-from generate_brewfile import generate_brewfile, load_manifest
 
 ROOT = Path(__file__).resolve().parent.parent
 BREWFILE = ROOT / "Brewfile"
+GENERATOR = ROOT / "scripts" / "generate-brewfile.py"
+
+
+def load_generator():
+    spec = importlib.util.spec_from_file_location("generate_brewfile", GENERATOR)
+    if spec is None or spec.loader is None:
+        raise ImportError(f"Cannot load generator module: {GENERATOR}")
+
+    module = importlib.util.module_from_spec(spec)
+    spec.loader.exec_module(module)
+    return module
 
 
 def validate_manifest(applications: list[dict]) -> list[str]:
@@ -39,10 +48,12 @@ def validate_manifest(applications: list[dict]) -> list[str]:
 
 
 def main() -> int:
-    applications = load_manifest()
+    generator = load_generator()
+
+    applications = generator.load_manifest()
     errors = validate_manifest(applications)
 
-    expected_brewfile = generate_brewfile(applications)
+    expected_brewfile = generator.generate_brewfile(applications)
 
     if not BREWFILE.exists():
         errors.append("Brewfile does not exist. Run: make generate-brewfile")
