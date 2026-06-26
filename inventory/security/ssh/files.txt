@@ -1,0 +1,6 @@
+.known_hosts.swp
+authorized_keys.save
+id_rsa
+id_rsa.pub
+known_hosts
+known_hosts.old

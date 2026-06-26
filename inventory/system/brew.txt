@@ -1,5 +1,6 @@
 gemini-cli
 git
+git-filter-repo
 go
 hugo
 jpeg
