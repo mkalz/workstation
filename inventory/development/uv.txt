@@ -1,0 +1,1 @@
+uv 0.11.24 (Homebrew 2026-06-23 aarch64-apple-darwin)

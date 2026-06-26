@@ -1,0 +1,107 @@
+4K Video Downloader.app
+4K Video Downloader+.app
+ActivePresenter.app
+AFFiNE-beta.app
+AFFiNE-canary.app
+AFFiNE.app
+Amazon Kindle.app
+Amazon Photos.app
+Amplenote Desktop.app
+AnyDesk.app
+Anytype.app
+Apple Immersive Video Utility.app
+Arq.app
+AusweisApp.app
+Bartender 5.app
+Bartender 6.app
+bwSyncShare.app
+Cabinet.app
+Carbon Copy Cloner.app
+CleanMyMac X.app
+DisplayLink Manager.app
+DisplayLink Software Uninstaller.app
+Docker.app
+Doneit.app
+Elgato Stream Deck.app
+Evernote.app
+Fantastical.app
+File Cabinet Pro.app
+FileZilla.app
+Firefox.app
+fotokasten PRO1 (de).app
+fotokasten.app
+GarageBand.app
+GitHub Desktop.app
+Google Analytics Opt Out.app
+Google Chrome.app
+Google Docs.app
+Google Drive.app
+Google Sheets.app
+Google Slides.app
+Gramps.app
+HEY.app
+iMovie.app
+iStat Menus.app
+jamovi.app
+Jiggler.app
+KeePassXC.app
+Keybase.app
+Keynote.app
+Logseq.app
+LosslessCut.app
+Lumi.app
+LyX.app
+Microsoft Excel.app
+Microsoft OneNote.app
+Microsoft Outlook.app
+Microsoft PowerPoint.app
+Microsoft Teams.app
+Microsoft Word.app
+MoneyMoney.app
+Moom.app
+Motrix.app
+Muse Hub.app
+Numbers.app
+OBS.app
+Obsidian.app
+Ollama.app
+OmniGraffle.app
+Omnivore.app
+OneDrive.app
+Pages.app
+Pagico.app
+Parallels Desktop.app
+Parallels Toolbox.app
+Poll Everywhere.app
+PopClip.app
+PopDo.app
+Publish or Perish.app
+Quick Note.app
+R.app
+rcmd.app
+ReminderBridge.app
+RStudio.app
+Safari.app
+Screen Studio.app
+ScreenFlow.app
+Sonos S1 Controller.app
+Sonos.app
+Spotify.app
+Stats.app
+SteuerSparErklärung Steuerjahr 2024.app
+SteuerSparErklärung Steuerjahr 2025.app
+Steuertipps 2024.app
+Telephone.app
+Text Workflow.app
+UPDF.app
+UPDF(1).app
+UPDF(2).app
+Visual Studio Code.app
+VLC.app
+VMware Fusion.app
+WakeOnCommand.app
+Webex.app
+WireGuard.app
+Xcode.app
+zoom.us.app
+Zotero.app

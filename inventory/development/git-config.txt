@@ -1,0 +1,7 @@
+filter.lfs.required=true
+filter.lfs.clean=git-lfs clean -- %f
+filter.lfs.smudge=git-lfs smudge -- %f
+filter.lfs.process=git-lfs filter-process
+user.name=Marco Kalz
+user.email=marco.kalz@gmail.com
+http.version=HTTP/1.1

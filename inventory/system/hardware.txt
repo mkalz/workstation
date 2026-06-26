@@ -1,0 +1,17 @@
+Hardware:
+
+    Hardware Overview:
+
+      Model Name: MacBook Air
+      Model Identifier: Mac14,2
+      Model Number: Z15T000QDD/A
+      Chip: Apple M2
+      Total Number of Cores: 8 (4 Performance and 4 Efficiency)
+      Memory: 24 GB
+      System Firmware Version: 18000.120.36
+      OS Loader Version: 18000.120.36
+      Serial Number (system): WY9Q1G369Q
+      Hardware UUID: 8CE384A1-DA66-5C6C-846A-736A65DAB1B5
+      Provisioning UDID: 00008112-001E305A3E45401E
+      Activation Lock Status: Enabled
+

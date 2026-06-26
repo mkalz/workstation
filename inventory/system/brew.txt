@@ -1,0 +1,12 @@
+gemini-cli
+git
+go
+hugo
+jpeg
+mas
+pkgconf
+postgresql@16
+python@3.13
+r
+twarc
+uv
