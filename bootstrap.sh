@@ -5,8 +5,8 @@ echo "Workstation Bootstrap"
 echo "====================="
 echo
 
-./install/homebrew.sh
-./install/brewfile.sh
+./install/10-homebrew.sh
+./install/20-brewfile.sh
 ./doctor.sh
 
 echo
