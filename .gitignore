@@ -1,0 +1,37 @@
+# macOS
+.DS_Store
+
+# Python
+__pycache__/
+*.py[cod]
+.venv/
+.pytest_cache/
+
+# R
+.Rhistory
+.RData
+.Rproj.user/
+
+# Editors
+.vscode/
+.idea/
+
+# Environment
+.env
+.env.*
+*.local
+
+# Secrets
+secrets/
+*.pem
+*.key
+
+# Generated inventory
+inventory/output/
+
+# Temporary files
+tmp/
+.cache/
+
+# Logs
+*.log
