@@ -8,6 +8,7 @@ echo
 ./install/10-homebrew.sh
 ./install/20-brewfile.sh
 ./install/30-python.sh
+./install/40-r.sh
 ./doctor.sh
 
 echo
