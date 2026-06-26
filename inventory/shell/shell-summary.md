@@ -1,13 +1,13 @@
 # Shell Inventory
 
-Generated: Fr. 26 Juni 2026 19:46:30 CEST
+Generated: Fr. 26 Juni 2026 19:50:56 CEST
 
 ## Existing shell files
 
 - .zshrc
 - .zprofile
 
-## PATH
+## PATH entries
 
 /Users/marcokalz/.nvm/versions/node/v22.17.1/bin
 /opt/homebrew/opt/python@3.13/libexec/bin
