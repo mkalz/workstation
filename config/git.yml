@@ -1,0 +1,7 @@
+git:
+  settings:
+    init.defaultBranch: main
+    pull.ff: only
+    fetch.prune: true
+    rebase.autoStash: true
+    core.autocrlf: input

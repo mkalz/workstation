@@ -1,6 +1,6 @@
 # Workstation Inventory
 
-Generated: Fr. 26 Juni 2026 19:50:56 CEST
+Generated: Fr. 26 Juni 2026 22:53:15 CEST
 
 ## Purpose
 
@@ -14,7 +14,7 @@ It does not imply that everything listed here should be migrated.
 
 | Area | Count |
 |---|---:|
-| Homebrew formulae | 13 |
+| Homebrew formulae | 12 |
 | Homebrew casks | 3 |
 | Mac App Store apps | 18 |
 | VS Code extensions | 0 |

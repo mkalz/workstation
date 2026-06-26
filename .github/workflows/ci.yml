@@ -4,6 +4,42 @@ on:
   push:
   pull_request:
 
+permissions:
+  contents: read
+
+jobs:
+  validate:
+    name: Validate workstation repository
+    runs-on: macos-latest
+
+    steps:
+      - name: Check out repository
+        uses: actions/checkout@v4
+
+      - name: Install system tooling
+        run: |
+          brew update
+          brew install uv shellcheck
+
+      - name: Install Python
+        run: uv python install 3.13
+
+      - name: Sync Python dependencies
+        run: uv sync
+
+      - name: Run repository checks
+        run: make check
+
+      - name: Lint shell scripts
+        run: make lint-shell
+
+      - name: Run bootstrap dry-run
+        run: make bootstrap-dry-runname: CI
+
+on:
+  push:
+  pull_request:
+
 jobs:
   validate:
     runs-on: macos-latest

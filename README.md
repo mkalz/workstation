@@ -1,67 +1,66 @@
 # Workstation
 
-A reproducible Apple Silicon workstation for academic work, software development, publishing, and AI-assisted workflows.
+A reproducible macOS workstation setup for academic work, software development, publishing, and AI-assisted workflows.
 
-## Philosophy
+This repository treats a workstation as infrastructure. The goal is not to clone an old Mac, but to define a clean, stable, and reproducible target state for a new machine.
 
-This repository treats a workstation as infrastructure.
+## Goal
 
-The goal is not to mirror an old Mac, but to define a clean, stable, and reproducible working environment for the coming years.
+A new Mac should eventually be set up with only a few manual steps:
 
-## Design principles
-
-1. Keep the host clean.
-2. Prefer reproducibility over convenience.
-3. Use containers for experimental tools and services.
-4. Use project-local environments for Python and research code.
-5. Avoid global Python packages.
-6. Document every major tool and decision.
-7. Never commit secrets, tokens, passwords, or private keys.
+1. Install Xcode Command Line Tools.
+2. Install Homebrew.
+3. Clone this repository.
+4. Run `make bootstrap`.
+5. Complete a small number of manual sign-ins.
+6. Start working.
 
 ## Scope
 
-This repository provisions and documents:
+This repository manages and documents:
 
-- macOS workstation setup
-- Homebrew packages and casks
-- Python via Homebrew and `uv`
-- R and academic publishing tools
-- Quarto and Hugo workflows
-- Docker-based services
-- AI-assisted workflows
-- Development tools
-- System checks
-
-## Out of scope
+- Homebrew packages, casks, and Mac App Store applications
+- application manifest validation
+- generated `Brewfile`
+- Git configuration
+- macOS defaults
+- VS Code extensions, user settings, and keybindings
+- bootstrap orchestration
+- repository validation
+- doctor checks
+- CI-ready checks
 
 This repository does not manage:
 
 - Apple ID
-- iCloud
+- iCloud account state
 - Mail accounts
-- Browser logins
+- browser logins
 - SSH private keys
-- Password manager data
-- Personal secrets
+- password manager data
+- API keys
+- personal secrets
+- private documents
 
-## Core strategy
+## Repository structure
 
-The host system should remain stable and minimal.
-
-Experimental tools, local AI services, notebooks, databases, and unstable software should run in isolated environments such as:
-
-- Docker containers
-- project-local `uv` environments
-- project-specific R environments
-
-## Roadmap
-
-- [ ] Add project foundation
-- [ ] Add Brewfile
-- [ ] Add bootstrap script
-- [ ] Add doctor checks
-- [ ] Add Python setup notes
-- [ ] Add R setup notes
-- [ ] Add container strategy
-- [ ] Add macOS configuration
-- [ ] Add documentation for secrets and security
+```text
+workstation/
+│
+├── Brewfile
+├── Makefile
+├── bootstrap.sh
+├── doctor.sh
+├── README.md
+├── pyproject.toml
+│
+├── install/
+├── config/
+├── docs/
+├── containers/
+├── inventory/
+├── scripts/
+├── tests/
+│
+├── .github/
+└── .vscode/

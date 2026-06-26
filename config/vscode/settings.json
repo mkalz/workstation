@@ -1,0 +1,19 @@
+{
+  "editor.formatOnSave": true,
+  "editor.rulers": [
+    88,
+    120
+  ],
+  "editor.tabSize": 2,
+  "files.insertFinalNewline": true,
+  "files.trimTrailingWhitespace": true,
+  "markdown.extension.toc.updateOnSave": false,
+  "python.analysis.typeCheckingMode": "basic",
+  "python.testing.unittestEnabled": true,
+  "python.testing.pytestEnabled": false,
+  "redhat.telemetry.enabled": false,
+  "telemetry.telemetryLevel": "off",
+  "terminal.integrated.defaultProfile.osx": "zsh",
+  "yaml.format.enable": true,
+  "yaml.validate": true
+}

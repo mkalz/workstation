@@ -3,7 +3,6 @@ git
 git-filter-repo
 go
 hugo
-jpeg
 mas
 pkgconf
 postgresql@16

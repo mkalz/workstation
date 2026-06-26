@@ -1,0 +1,10 @@
+[
+  {
+    "key": "cmd+shift+r",
+    "command": "workbench.action.reloadWindow"
+  },
+  {
+    "key": "cmd+shift+t",
+    "command": "workbench.action.terminal.new"
+  }
+]

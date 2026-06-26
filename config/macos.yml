@@ -1,0 +1,71 @@
+macos:
+  defaults:
+    - domain: NSGlobalDomain
+      key: AppleShowAllExtensions
+      type: bool
+      value: true
+
+    - domain: NSGlobalDomain
+      key: ApplePressAndHoldEnabled
+      type: bool
+      value: false
+
+    - domain: NSGlobalDomain
+      key: NSNavPanelExpandedStateForSaveMode
+      type: bool
+      value: true
+
+    - domain: NSGlobalDomain
+      key: NSNavPanelExpandedStateForSaveMode2
+      type: bool
+      value: true
+
+    - domain: com.apple.finder
+      key: ShowPathbar
+      type: bool
+      value: true
+
+    - domain: com.apple.finder
+      key: ShowStatusBar
+      type: bool
+      value: true
+
+    - domain: com.apple.finder
+      key: FXPreferredViewStyle
+      type: string
+      value: Nlsv
+
+    - domain: com.apple.finder
+      key: FXEnableExtensionChangeWarning
+      type: bool
+      value: false
+
+    - domain: com.apple.desktopservices
+      key: DSDontWriteNetworkStores
+      type: bool
+      value: true
+
+    - domain: com.apple.desktopservices
+      key: DSDontWriteUSBStores
+      type: bool
+      value: true
+
+    - domain: com.apple.dock
+      key: autohide
+      type: bool
+      value: true
+
+    - domain: com.apple.dock
+      key: tilesize
+      type: int
+      value: 48
+
+    - domain: com.apple.dock
+      key: show-recents
+      type: bool
+      value: false
+
+    - domain: com.apple.dock
+      key: mru-spaces
+      type: bool
+      value: false

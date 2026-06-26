@@ -1,5 +1,105 @@
 # macOS
 .DS_Store
+.AppleDouble
+.LSOverride
+__MACOSX/
+
+# Python
+__pycache__/
+*.py[cod]
+*.pyo
+.venv/
+.pytest_cache/
+.mypy_cache/
+.ruff_cache/
+
+# uv
+.python-version
+
+# R
+.Rhistory
+.RData
+.Rproj.user/
+
+# Editors
+.idea/
+
+# VS Code
+.vscode/*
+!.vscode/extensions.json
+
+# Environment
+.env
+.env.*
+*.local
+
+# Secrets
+secrets/
+*.pem
+*.key
+*.p12
+*.mobileprovision
+
+# Generated inventory
+inventory/output/
+
+# Temporary files
+tmp/
+.cache/
+
+# Logs
+*.log# macOS
+.DS_Store
+.AppleDouble
+.LSOverride
+__MACOSX/
+
+# Python
+__pycache__/
+*.py[cod]
+*.pyo
+.venv/
+.pytest_cache/
+.mypy_cache/
+.ruff_cache/
+
+# uv
+.python-version
+
+# R
+.Rhistory
+.RData
+.Rproj.user/
+
+# Editors
+.idea/
+
+# VS Code
+.vscode/*
+!.vscode/extensions.json
+
+# Environment
+.env
+.env.*
+*.local
+
+# Secrets
+secrets/
+*.pem
+*.key
+*.p12
+*.mobileprovision
+
+# Generated inventory
+inventory/output/
+
+# Temporary files
+tmp/
+.cache/
+
+# Logs
+*.log# macOS
+.DS_Store
 
 # Python
 __pycache__/
