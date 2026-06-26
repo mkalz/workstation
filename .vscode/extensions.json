@@ -1,0 +1,11 @@
+{
+  "recommendations": [
+    "github.vscode-github-actions",
+    "timonwong.shellcheck",
+    "redhat.vscode-yaml",
+    "davidanson.vscode-markdownlint",
+    "ms-azuretools.vscode-docker",
+    "quarto.quarto",
+    "eamodio.gitlens"
+  ]
+}
